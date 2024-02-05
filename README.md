@@ -6,7 +6,7 @@ Backend construído com NestJS para um sistema de questionários. O foco princip
 
 #### Instale as dependencias
 ```bash
-  npm start
+  npm i
 ```
 
 ### Instale a CLI do Sequelize

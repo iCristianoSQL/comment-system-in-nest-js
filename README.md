@@ -1,73 +1,65 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+# Questionário
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Backend construído com NestJS para um sistema de questionários. O foco principal deste projeto é fornecer um conjunto de APIs que permitam a manipulação de dados relacionados a Usuários, Questionários, Perguntas e Respostas. Utilizando a arquitetura limpa, a aplicação proporciona operações de CRUD (Create, Read, Update, Delete) através do Sequelize para interação com o banco de dados. Além disso, a documentação da API é gerada automaticamente pelo Swagger, facilitando a compreensão e integração por parte dos desenvolvedores.
+## Instalação
 
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Installation
-
+#### Instale as dependencias
 ```bash
-$ npm install
+  npm start
 ```
 
-## Running the app
-
+### Instale a CLI do Sequelize
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+    npm i sequelize-cli
 ```
 
-## Test
-
+### Gere o banco de Dados
 ```bash
-# unit tests
-$ npm run test
+    npx sequelize-cli db:create
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
 ```
 
-## Support
+### Gere o banco de Dados
+```bash
+    npx sequelize-cli db:create
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+```
 
-## Stay in touch
+### Gere a migration
+```bash
+    npx sequelize-cli db:migrate --migrations-path src/database/migrations
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+```
+### Start
+```bash
+    npm run dev
+```
+## O Sistema
+No sistema em questão, é possível manipular os seguintes cruds:
 
-## License
+- #### Usuario
 
-Nest is [MIT licensed](LICENSE).
+- #### Questionário
+
+- #### Pergunta
+
+- #### Resposta
+
+
+## Techs
+
+#### Sequelize
+- O Sequelize é uma biblioteca para Node.js que facilita a interação com bancos de dados relacionais, como o PostgreSQL. Ele simplifica as operações de banco de dados, permitindo que desenvolvedores criem consultas SQL de maneira mais intuitiva usando JavaScript. Isso simplifica o processo de integração do banco de dados com aplicativos web, tornando a manipulação de dados mais eficiente.
+
+#### PostgreSQL
+- O PostgreSQL é um sistema de gerenciamento de banco de dados relacional de código aberto. Ele é conhecido por sua confiabilidade, robustez e conformidade com padrões. O PostgreSQL é usado para armazenar e recuperar dados de maneira estruturada, sendo uma escolha popular para aplicativos que exigem consistência e escalabilidade. Ele suporta recursos avançados, como consultas complexas e transações, tornando-o uma poderosa solução para armazenamento de dados.
+
+#### Typescript:
+- Typescript é uma linguagem de programação que estende o JavaScript, adicionando um sistema de tipos estáticos. Isso significa que o Typescript permite aos desenvolvedores declarar o tipo de dado de uma variável, o que ajuda a prevenir erros comuns durante o desenvolvimento e proporciona um código mais robusto e fácil de entender.
+
+#### Arquitetura Limpa
+- A Arquitetura Limpa é um conceito de design de software que enfatiza a separação de preocupações e a organização hierárquica do código. Ela propõe a divisão do sistema em camadas, onde cada camada tem responsabilidades específicas. O objetivo é manter o código flexível e independente de frameworks, facilitando a manutenção e a evolução do software ao longo do tempo.
+
+#### Swagger
+- O Swagger é uma ferramenta que simplifica a documentação e teste de APIs. Ele fornece uma interface visual amigável para explorar e testar endpoints de API, além de gerar automaticamente documentação compreensível. O Swagger facilita a colaboração entre desenvolvedores e equipes, pois oferece uma visão clara dos pontos de extremidade disponíveis e dos parâmetros necessários para cada solicitação, promovendo a interoperabilidade e a compreensão fácil da API.

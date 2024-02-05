@@ -33,7 +33,7 @@ Backend construído com NestJS para um sistema de questionários. O foco princip
 ```
 ### Start
 ```bash
-    npm run dev
+    npm run start
 ```
 ## O Sistema
 No sistema em questão, é possível manipular os seguintes cruds:

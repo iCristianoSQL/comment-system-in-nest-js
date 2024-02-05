@@ -1,0 +1,24 @@
+{
+    "development": {
+      "username": "your_name",
+      "password": "your_password",
+      "database": "comment-dev",
+      "host": "localhost",
+      "dialect": "postgres"
+    },
+    "test": {
+      "username": "your_name",
+      "password": "your_password",
+      "database": "comment-test",
+      "host": "localhost",
+      "dialect": "postgres"
+    },
+    "production": {
+      "username": "your_name",
+      "password": "your_password",
+      "database": "comment-prod",
+      "host": "localhost",
+      "dialect": "postgres"
+    }
+  }
+  
